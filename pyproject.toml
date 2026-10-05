@@ -1,0 +1,25 @@
+[project]
+name = "healthcare-adk-agent"
+version = "0.1.0"
+description = "Enterprise-grade Healthcare Triage & Consultation Agent with ADK 2.0 and Vertex AI"
+authors = [{ name = "Healthcare Engineering Team" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+cloud = [
+    "google-cloud-dlp>=3.12.0",
+    "google-genai>=0.1.0",
+    "google-cloud-firestore>=2.14.0",
+    "google-cloud-alloydb-connector>=1.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
